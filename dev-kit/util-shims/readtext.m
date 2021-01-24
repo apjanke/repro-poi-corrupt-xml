@@ -7,5 +7,5 @@ arguments
   file (1,1) string
   encoding (1,1) string = 'UTF-8' % TODO: auto-detect file encoding via sniffing
 end
-out = mypackage.internal.util.readtext(file, encoding);
+out = blah.internal.util.readtext(file, encoding);
 end

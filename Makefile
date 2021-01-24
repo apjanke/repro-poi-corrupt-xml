@@ -18,33 +18,33 @@
 
 .PHONY: test
 test:
-	./dev-kit/run_matlab "mypackage_make test"
+	./dev-kit/run_matlab "blah_make test"
 
 .PHONY: build
 build:
-	./dev-kit/run_matlab "mypackage_make build"
+	./dev-kit/run_matlab "blah_make build"
 
 # Build the programmatically-generated parts of the _source_ files for the doco
 .PHONY: docs
 docs:
-	./dev-kit/run_matlab "mypackage_make doc-src"
+	./dev-kit/run_matlab "blah_make doc-src"
 
 # Build the actual output documents
 .PHONY: doc
 doc:
-	./dev-kit/run_matlab "mypackage_make doc"
+	./dev-kit/run_matlab "blah_make doc"
 
 .PHONY: m-doc
 m-doc:
-	./dev-kit/run_matlab "mypackage_make m-doc"
+	./dev-kit/run_matlab "blah_make m-doc"
 
 .PHONY: toolbox
 toolbox: m-doc
-	./dev-kit/run_matlab "mypackage_make toolbox"
+	./dev-kit/run_matlab "blah_make toolbox"
 
 .PHONY: dist
 dist:
-	./dev-kit/run_matlab "mypackage_make dist"
+	./dev-kit/run_matlab "blah_make dist"
 
 # TODO: Port this to M-code. This is hard because the .jar cannot be copied in to place
 # in lib while Matlab is running, because it locks loaded .jar files (at least on Windows).
@@ -56,10 +56,10 @@ java:
 
 .PHONY: clean
 clean:
-	./dev-kit/run_matlab "mypackage_make clean"
+	./dev-kit/run_matlab "blah_make clean"
 
 # Run this _after_ initialization if you want to throw away some nonessential
 # features to make your repo layout simpler.
 .PHONY: simplify
 simplify:
-	./dev-kit/run_matlab "mypackage_make simplify"
+	./dev-kit/run_matlab "blah_make simplify"

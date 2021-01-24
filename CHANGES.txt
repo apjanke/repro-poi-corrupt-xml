@@ -1,4 +1,4 @@
-__myproject__ Changelog
+repro-poi-corrupt-xml Changelog
 ================================
 
 Version 0.1.0 (date goes here)

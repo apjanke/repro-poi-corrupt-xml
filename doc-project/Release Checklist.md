@@ -1,4 +1,4 @@
-# __myproject__ Release Checklist
+# repro-poi-corrupt-xml Release Checklist
 
 ## Using the script
 
@@ -16,7 +16,7 @@ The `dev-kit/make_release` script can take care of most of the release work for 
   * Wouldn't hurt to do `make clean && git status && make test`/manual-cleanup, just to be sure.
 * Update and double-check the version number and date in `VERSION`
 * Update the installation instructions in README to use the upcoming new release tarball URL.
-  * Format is: `https://github.com/__myghuser__/__myproject__/releases/download/v<version>/__myproject__-<version>.tar.gz`
+  * Format is: `https://github.com/apjanke/repro-poi-corrupt-xml/releases/download/v<version>/repro-poi-corrupt-xml-<version>.tar.gz`
 * Regenerate the doco
   * `make doc`
 * Commit all the files changed by the above steps.

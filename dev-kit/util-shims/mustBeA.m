@@ -19,7 +19,7 @@ function mustBeA(value, type)
 % Note: The cellstr pseudotype is nontrivial to check for, as it
 % must call iscellstr() and check all cell contents. Avoid calling it in
 % performance-critical code.
-mypackage.internal.util.mustBeA(value, type);
+blah.internal.util.mustBeA(value, type);
 end
 
 

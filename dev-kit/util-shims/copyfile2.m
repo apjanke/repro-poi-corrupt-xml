@@ -4,5 +4,5 @@ arguments
   src (1,:) string
   dest (1,1) string
 end
-mypackage.internal.util.copyfile2(src, dest);
+blah.internal.util.copyfile2(src, dest);
 end

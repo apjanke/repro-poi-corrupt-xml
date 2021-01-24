@@ -8,5 +8,5 @@ function out = size2str(sz)
 % Examples:
 %
 % size2str(size(magic(3)))
-out = mypackage.internal.util.size2str(sz);
+out = blah.internal.util.size2str(sz);
 end

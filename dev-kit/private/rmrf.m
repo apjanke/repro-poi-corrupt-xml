@@ -1,4 +1,4 @@
 function rmrf(files)
 % Recursively delete files and folders
-mypackage.internal.util.rmrf(files);
+blah.internal.util.rmrf(files);
 end

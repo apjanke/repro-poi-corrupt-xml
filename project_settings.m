@@ -7,7 +7,7 @@ function out = project_settings
 % The name of your project and its GitHub repo. Capitalization should match what
 % your public "branding" is; this will show up in human-readable documentation.
 % No spaces, /, or & allowed!
-out.PROJECT = "MyCoolProject";
+out.PROJECT = "repro-poi-corrupt-xml";
 
 % The version of Matlab you're developing against. This will be the version of
 % Matlab that the project builds against (on Mac and Windows anyway), and the minimum
@@ -19,10 +19,10 @@ out.PROJECT_MATLAB_VERSION = "R2019b";
 % and is the "namespace" that your project lives in.
 % It is conventional for package names to be in all lower case.
 % Nothing but letters allowed!
-out.PACKAGE = "mycoolpackage";
+out.PACKAGE = "blah";
 
 % Your GitHub user name or organization name that's hosting the project
-out.GHUSER = "mygithubusername";
+out.GHUSER = "apjanke";
 
 % If you want to provide a contact email for your project, put it here. Optional.
 out.PROJECT_EMAIL = "";
@@ -45,19 +45,19 @@ out.PROJECT_EMAIL = "";
 % If you have a large project, you should stick with "jekyll" or "mkdocs" and put your
 % main GitHub Pages website in a separate repo. "gh-pages" is more appropriate
 % for small projects.
-out.DOCTOOL = "gh-pages-raw";
+out.DOCTOOL = "gh-pages";
 
 % Human-readable name of the project's primary author or maintainer
-out.PROJECT_AUTHOR = "Your Name Here";
+out.PROJECT_AUTHOR = "Andrew Janke";
 
 % Everything below here is optional! If you omit it, you'll end up with placeholder text
 % in some of your documentation, but the project will still work
 
 % One-sentence summary of the project. No <, >, /, or & characters allowed!
-out.PROJECT_SUMMARY = "Short summary of project goes here";
+out.PROJECT_SUMMARY = "Repro of corrupt OOXML production with POI under Matlab";
 
 % Multi-sentence project description. No <, >, /, or & characters allowed!
-out.PROJECT_DESCRIPTION = "Longer description of project goes here.";
+out.PROJECT_DESCRIPTION = "Repro of corrupt OOXML production with POI under Matlab";
 
 % Home page web site for the project's author
 out.AUTHOR_HOMEPAGE = "https://github.com/" + out.GHUSER;

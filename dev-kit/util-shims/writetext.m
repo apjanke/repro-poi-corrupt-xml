@@ -11,5 +11,5 @@ arguments
   file (1,1) string
   encoding (1,1) string = 'UTF-8'
 end
-mypackage.internal.util.writetext(text, file, encoding);
+blah.internal.util.writetext(text, file, encoding);
 end

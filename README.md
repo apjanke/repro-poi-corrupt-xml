@@ -38,7 +38,7 @@ Then:
 * Edit the variables `project_settings.m`.
 * Open Matlab and run `init_project_from_template.m`.
 * Edit `.editorconfig` to reflect your preferred code style.
-* Edit `<myproject>.prj.in` and put in all your contact and descriptive info and other stuff.
+* Edit `<repro-poi-corrupt-xml>.prj.in` and put in all your contact and descriptive info and other stuff.
 
 And then:
 
@@ -53,7 +53,7 @@ See the [User Guide](https://matlabprojecttemplate.janklab.net/UserGuide.html) f
 
 ## Unit tests
 
-You should write unit tests for your project! Use the [Matlab Unit Test Framework](https://www.mathworks.com/help/matlab/matlab-unit-test-framework.html) and put your tests in `Mcode/+<myproject>/+test`. Run them with `make test` in the shell or with `dev-kit/launchtests.m` in Matlab.
+You should write unit tests for your project! Use the [Matlab Unit Test Framework](https://www.mathworks.com/help/matlab/matlab-unit-test-framework.html) and put your tests in `Mcode/+<repro-poi-corrupt-xml>/+test`. Run them with `make test` in the shell or with `dev-kit/launchtests.m` in Matlab.
 
 ## License
 

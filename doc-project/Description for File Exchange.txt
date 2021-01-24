@@ -8,9 +8,9 @@ just copy and paste.
 
 Summary:
 
-__myproject_summary__
+Repro of corrupt OOXML production with POI under Matlab
 
 
 Description:
 
-__myproject_description__
+Repro of corrupt OOXML production with POI under Matlab

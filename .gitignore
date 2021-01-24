@@ -6,6 +6,7 @@
 # repo without a build step; they are not just distribution artifacts.
 
 # Build dirs and artifacts
+*.docx
 /build
 /dist
 /target
@@ -14,7 +15,7 @@
 # Do NOT check the Matlab Toolbox .prj file in to the repo! This file can *not* be
 # shared between multiple users, because Matlab bakes full, absolute file paths
 # in to it.
-myproject.prj
+repro-poi-corrupt-xml.prj
 M-doc/
 
 # Editor and IDE droppings

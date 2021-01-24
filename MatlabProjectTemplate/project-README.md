@@ -1,17 +1,17 @@
-# __myproject__
+# repro-poi-corrupt-xml
 
 <!-- Remove the badges for CI services that you're not going to use. -->
-[![Travis Build Status](https://travis-ci.com/myghuser/myproject.svg?branch=main)](https://travis-ci.com/github/myghuser/myproject)  [![CircleCI Build Status](https://circleci.com/gh/myghuser/myproject.svg?style=shield)](https://circleci.com/gh/myghuser/myproject) [![Azure Build Status](https://dev.azure.com/myghuser/myproject/_apis/build/status/myghuser.myproject?branchName=main)](https://dev.azure.com/myghuser/myproject/_build/latest?definitionId=1&branchName=main)
+[![Travis Build Status](https://travis-ci.com/apjanke/repro-poi-corrupt-xml.svg?branch=main)](https://travis-ci.com/github/apjanke/repro-poi-corrupt-xml)  [![CircleCI Build Status](https://circleci.com/gh/apjanke/repro-poi-corrupt-xml.svg?style=shield)](https://circleci.com/gh/apjanke/repro-poi-corrupt-xml) [![Azure Build Status](https://dev.azure.com/apjanke/repro-poi-corrupt-xml/_apis/build/status/apjanke.repro-poi-corrupt-xml?branchName=main)](https://dev.azure.com/apjanke/repro-poi-corrupt-xml/_build/latest?definitionId=1&branchName=main)
 
-__myproject_summary__
+Repro of corrupt OOXML production with POI under Matlab
 
 ## About
 
-__myproject_description__
+Repro of corrupt OOXML production with POI under Matlab
 
 ## Installation
 
-To install __myproject__, download it from the [Releases page](https://github.com/__myghuser__/__myproject__/releases) or clone the [repo](https://github.com/__myghuser__/__myproject__) to get it on your disk. Then add its `Mcode/` folder to your Matlab path.
+To install repro-poi-corrupt-xml, download it from the [Releases page](https://github.com/apjanke/repro-poi-corrupt-xml/releases) or clone the [repo](https://github.com/apjanke/repro-poi-corrupt-xml) to get it on your disk. Then add its `Mcode/` folder to your Matlab path.
 
 ## Usage
 
@@ -19,7 +19,7 @@ To install __myproject__, download it from the [Releases page](https://github.co
 
 ## Author
 
-__myproject__ is written and maintained by [__YOUR_NAME_HERE__](__author_homepage__). The project home page is <https://github.com/__myghuser__/__myproject__>.
+repro-poi-corrupt-xml is written and maintained by [Andrew Janke](https://github.com/apjanke). The project home page is <https://github.com/apjanke/repro-poi-corrupt-xml>.
 
 ## Acknowledgments
 
