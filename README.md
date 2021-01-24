@@ -50,13 +50,33 @@ But when I run that same Java code in the Matlab environment, which is also curr
 
 ![Excel error dialog screencap](docs/images/excel-error-message.png)
 
+Digging in to the XML files inside the OOXML `.xlsx` files (they're just ZIP files; you can extract them), I see differences like this:
+
+Good files from Java outside Matlab:
+
+```xml
+<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
+[...]
+<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+[...]
+```
+
+Bad files from the in-Matlab runs:
+
+```xml
+<Types>
+[...]
+<Relationships>
+[...]
+```
+
 I think the problem is the XML-related JARs that Matlab is bundling in `java/jarext`:
 
 * `xml-apis.jar`
 * `xml-apis-ext.jar`
 * `xercesImpl.jar`
 
-Java 8 already ships with these XML APIs included. These XML JAR files in `jarext/` may be older, possibly buggy ones, for previous versions of Java. IMHO, they should probably be removed.
+Java 8 already ships with these XML APIs included. These XML JAR files in `jarext/` may be older, possibly buggy ones, meant for previous versions of Java. I suspect that some or all of them should probably be removed so the bundled JRE just uses the XML APIs that it itself bundles. Maybe `xml-apis.jar` and `xercesImpl.jar` should be removed, and `xml-apis-ext.jar` should be updated. I'm not sure.
 
 See [matlab-jarext-inspector](https://github.com/janklab/matlab-jarext-inspector) for more info and tools for examining which third-party Java library JARs are bundled with Matlab.
 
