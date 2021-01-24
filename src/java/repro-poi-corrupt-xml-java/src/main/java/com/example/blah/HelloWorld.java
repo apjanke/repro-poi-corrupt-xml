@@ -12,6 +12,12 @@ public class HelloWorld {
 
   public static void writeHelloWorldExcel(String basename) {
     try {
+      String xmlCommonsVer = org.apache.xmlcommons.Version.getVersion();
+      System.out.println("XML Commons version: " + xmlCommonsVer);
+    } catch (Error e) {
+      System.out.println("Could not get Apache XML Commons version (" + e.getMessage() +")");
+    }
+    try {      
       XSSFWorkbook wkbk = new XSSFWorkbook();
       XSSFSheet sheet = wkbk.createSheet("Hello World");
       XSSFRow row = sheet.createRow(0);
