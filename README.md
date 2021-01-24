@@ -16,7 +16,6 @@ To do the repro:
 
 * Add `Mcode/` to your Matlab path
 * Run `blah.Blah.writeHelloWorldExcel`
-* Run `blah.Blah.writeHelloWorldExcelUsingJavaInsideMatlab`
 * Try to open the resulting `.xlsx` files
 
 The `.xlsx` files will be in the `build/` directory.
@@ -26,16 +25,14 @@ Then, for comparison, create an XLSX file in just Java, run outside of Matlab:
 * Run `./create_helloworld_xlsx_from_java`
 * Try opening `build/helloworld-java.xlsx`
 
-To see details of the produced XML in the files, do this:
+To see details of the produced XML in the files, do something like this:
 
 ```bash
 cd build
-mkdir helloworld-R2021a
-cd helloworld-R2021a
-unzip ../helloworld-R2021a.xlsx
+for f in *.xlsx; do d="$f.d"; mkdir -p "$d"; (cd "$d"; unzip -q "../$f"); done
 ```
 
-And then open that directory in a text editor.
+And then open the `build/` directory in a text editor that's capable of viewing multiple files, like Visual Studio Code.
 
 ### Java versions
 

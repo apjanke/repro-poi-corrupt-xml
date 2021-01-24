@@ -3,6 +3,7 @@ classdef Blah < blah.internal.BlahBase
   methods (Static)
     
     function writeHelloWorldExcel()
+      announceVersion
       if ~isfolder('build')
         mkdir('build');
       end
@@ -21,12 +22,8 @@ classdef Blah < blah.internal.BlahBase
       jOutStream.close;
       
       fprintf('Created %s\n', file);
-    end
-    
-    function writeHelloWorldExcelUsingJavaInsideMatlab()
-      if ~isfolder('build')
-        mkdir('build');
-      end
+      
+      % Now do it with Java code inside Matlab
       javaHello = com.example.blah.HelloWorld;
       javaHello.writeHelloWorldExcel(sprintf('helloworld-R%s-java.xlsx', version('-release')));
     end
@@ -35,3 +32,7 @@ classdef Blah < blah.internal.BlahBase
   
 end
 
+function announceVersion
+fprintf('Matlab: %s\n', version);
+fprintf('Matlab JRE: %s\n', version('-java'));
+end
