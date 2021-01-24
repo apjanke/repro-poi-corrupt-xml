@@ -46,7 +46,9 @@ To make this a fair reproduction, you need to have a Java 8 JRE installed on you
 
 For me, when I run this code under a plain Java 8 JDK, the resulting `.xlsx` files are fine, and open with no problem in Excel.
 
-But when I run that same Java code in the Matlab environment, which is also currently shipping JDK 8, I get corrupted files.
+But when I run that same Java code in the Matlab environment, which is also currently shipping JDK 8, I get corrupted files. Attempting to open them in Excel gives me errors like this:
+
+![Excel error dialog screencap](docs/images/excel-error-message.png)
 
 I think the problem is the XML-related JARs that Matlab is bundling in `java/jarext`:
 
