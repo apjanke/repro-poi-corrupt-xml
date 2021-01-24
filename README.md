@@ -8,6 +8,8 @@ This applies to Matlab R2019b (and probably earlier, going back to whenever they
 
 Technical Support Case #03977621 has been opened with MathWorks Technical Support about this issue.
 
+Stack Overflow question about this: <https://stackoverflow.com/questions/59811366/apache-poi-3-16-creates-invalid-files-when-run-inside-matlab>.
+
 ## Reproduction
 
 To do the repro:
