@@ -6,7 +6,6 @@
 # repo without a build step; they are not just distribution artifacts.
 
 # Build dirs and artifacts
-*.docx
 /build
 /dist
 /target

@@ -3,7 +3,10 @@ classdef Blah < blah.internal.BlahBase
   methods (Static)
     
     function writeHelloWorldExcel()
-      file = sprintf('helloworld-R%s.xlsx', version('-release'));
+      if ~isfolder('build')
+        mkdir('build');
+      end
+      file = sprintf('build/helloworld-R%s.xlsx', version('-release'));
       
       % Create Excel workbook using POI
       jWkbk = org.apache.poi.xssf.usermodel.XSSFWorkbook();
@@ -20,9 +23,12 @@ classdef Blah < blah.internal.BlahBase
       fprintf('Created %s\n', file);
     end
     
-    function writeHelloWorldExcelUsingJava()
+    function writeHelloWorldExcelUsingJavaInsideMatlab()
+      if ~isfolder('build')
+        mkdir('build');
+      end
       javaHello = com.example.blah.HelloWorld;
-      javaHello.writeHelloWorldExcel('helloworld-R%-java.xlsx', version('-release'));
+      javaHello.writeHelloWorldExcel(sprintf('helloworld-R%s-java.xlsx', version('-release')));
     end
     
   end

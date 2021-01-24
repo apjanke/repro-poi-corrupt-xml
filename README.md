@@ -8,9 +8,17 @@ To do the repro:
 
 * Add `Mcode/` to your Matlab path
 * Run `blah.Blah.writeHelloWorldExcel`
-* Try to open the resulting `.xlsx` file
+* Run `blah.Blah.writeHelloWorldExcelUsingJavaInsideMatlab`
+* Try to open the resulting `.xlsx` files
 
-To see details of the produced XML, do this:
+The `.xlsx` files will be in the `build/` directory.
+
+Then, for comparison, create an XLSX file in just Java, run outside of Matlab:
+
+* Run `./create_helloworld_xlsx_from_java`
+* Try opening `build/helloworld-java.xlsx`
+
+To see details of the produced XML in the files, do this:
 
 ```bash
 cd build
@@ -21,8 +29,20 @@ unzip ../helloworld-R2021a.xlsx
 
 And then open that directory in a text editor.
 
-Then, for comparison, create an XLSX file in just Java:
+## What's going on
 
-* Run `./create_helloworld_xlsx_from_java`
+For me, when I run this code under a plain Java 8 JDK, the resulting `.xlsx` files are fine, and open with no problem in Excel.
 
+But when I run that same Java code in the Matlab environment, which is also currently shipping JDK 8, I get corrupted files.
 
+I think the problem is the XML-related JARs that Matlab is bundling in `java/jarext`:
+
+* `xml-apis.jar`
+* `xml-apis-ext.jar`
+* `xercesImpl.jar`
+
+Java 8 already ships with these XML APIs included. These XML JAR files in `jarext/` may be older, possibly buggy ones, for previous versions of Java. IMHO, they should probably be removed.
+
+## Author
+
+This repro case was created by [Andrew Janke](https://apjanke.net). Its home page is [its GitHub repo](https://github.com/apjanke/repro-poi-corrupt-xml).
