@@ -23,4 +23,5 @@ do_it () {
   "$@"
 }
 
+echo "Java version: $($java -version 2>&1)"
 do_it "$java" -classpath "$cp" com.example.blah.HelloWorld
