@@ -2,6 +2,12 @@
 
 This reproduces a bug where using Apache POI inside Matlab produces corrupt OOXML files, where some of the XML is missing attributes like namespaces on some of its elements.
 
+When running the exact same code, against the exact same JARs, under a JRE outside the Matlab environment, the produced files are fine. This tells me that Matlab's Java XML library setup is messed up.
+
+This applies to Matlab R2019b (and probably earlier, going back to whenever they switched the bundled JRE to Java 8), and at least up to R2020b (and future releases unless they fix it).
+
+Technical Support Case #03977621 has been opened with MathWorks Technical Support about this issue.
+
 ## Reproduction
 
 To do the repro:
