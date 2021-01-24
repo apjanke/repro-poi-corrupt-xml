@@ -37,6 +37,10 @@ unzip ../helloworld-R2021a.xlsx
 
 And then open that directory in a text editor.
 
+### Java versions
+
+To make this a fair reproduction, you need to have a Java 8 JRE installed on your machine, and use that. On Mac, this is detected automatically (using `/usr/libexec/java_home`). On Linux, you need to get your Java 8 JRE on your path yourself, so calling plain `java` invokes Java 8.
+
 ## What's going on
 
 For me, when I run this code under a plain Java 8 JDK, the resulting `.xlsx` files are fine, and open with no problem in Excel.
