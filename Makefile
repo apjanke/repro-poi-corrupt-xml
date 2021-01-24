@@ -50,9 +50,9 @@ dist:
 # in lib while Matlab is running, because it locks loaded .jar files (at least on Windows).
 .PHONY: java
 java:
-	cd src/java/MyCoolProject-java; mvn package
-	mkdir -p lib/java/MyCoolProject-java
-	cp src/java/MyCoolProject-java/target/*.jar lib/java/MyCoolProject-java
+	cd src/java/repro-poi-corrupt-xml-java; mvn package
+	mkdir -p lib/java/repro-poi-corrupt-xml-java
+	cp src/java/repro-poi-corrupt-xml-java/target/*.jar lib/java/repro-poi-corrupt-xml-java
 
 .PHONY: clean
 clean:

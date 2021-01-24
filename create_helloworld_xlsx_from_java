@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+set -e
+
+uname=$(uname)
+if [[ "$uname" == "Darwin" ]]; then
+  java="$(/usr/libexec/java_home --version 1.8)/bin/java"
+else
+  java=java
+fi
+
+cp=""
+for jar in lib/java/*/*.jar; do
+  if [[ -z "$cp" ]]; then
+    cp="$jar"
+  else
+    cp="$cp:$jar"
+  fi
+done
+
+do_it () {
+  echo "$@"
+  "$@"
+}
+
+do_it "$java" -classpath "$cp" com.example.blah.HelloWorld

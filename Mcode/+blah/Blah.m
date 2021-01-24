@@ -20,6 +20,11 @@ classdef Blah < blah.internal.BlahBase
       fprintf('Created %s\n', file);
     end
     
+    function writeHelloWorldExcelUsingJava()
+      javaHello = com.example.blah.HelloWorld;
+      javaHello.writeHelloWorldExcel('helloworld-R%-java.xlsx', version('-release'));
+    end
+    
   end
   
 end
